@@ -60,7 +60,9 @@ export default function XssChallenge() {
       </form>
     </Paper>
     <Paper sx={{ p: 3 }}>
-      <Typography variant="h2" sx={{ fontSize: '1.5rem' }}>Comentários</Typography>
+      <Typography key={comment.id} component="p" sx={{ whiteSpace: 'pre-wrap', wordBreak: 'break-word' }}>
+  {comment.content}
+</Typography>
       {/* OWASP Top 10:2025 A05 - Injeção (XSS armazenado):
           dangerouslySetInnerHTML interpreta o comentário como HTML sem escape ou sanitização. */}
       {comments.map(comment => (
