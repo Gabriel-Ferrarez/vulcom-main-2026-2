@@ -35,6 +35,8 @@ app.use(cookieParser())
 import carsRouter from './routes/cars.js'
 app.use('/cars', carsRouter)
 
+import auth from './middleware/auth.js'
+app.use(auth)
 
 import customersRouter from './routes/customers.js'
 app.use('/customers', customersRouter)

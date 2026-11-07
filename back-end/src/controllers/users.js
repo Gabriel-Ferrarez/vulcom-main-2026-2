@@ -1,5 +1,6 @@
 import prisma from '../database/client.js'
 import jwt from 'jsonwebtoken'
+import { hashPassword, verifyPassword } from './hash.js'
 
 
 const controller = {}     // Objeto vazio
